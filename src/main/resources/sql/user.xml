@@ -1,0 +1,43 @@
+<queries>
+    <sql id="USER_LOGIN" version="0001">
+        <statement>
+            <![CDATA[
+                SELECT * FROM USER_INFO
+                WHERE USER_ID = '$!{USER_ID}'
+                AND PASSWORD = '$!{USER_PW}'
+            ]]>
+        </statement>
+    </sql>
+
+    <sql id="USER_LOGIN_HISTORY_INSERT" version="0001">
+    <statement>
+        <![CDATA[
+                INSERT INTO USER_LOGIN_HISTORY (
+                    USER_ID,
+                    LOGIN_ID,
+                    LOGIN_RESULT,
+                    FAIL_REASON,
+                    IP_ADDRESS,
+                    USER_AGENT,
+                    CREATED_AT,
+                    CREATED_BY,
+                    UPDATED_AT,
+                    UPDATED_BY,
+                    STATUS
+                ) VALUES (
+                    '$!{USER_ID}',
+                    '$!{LOGIN_ID}',
+                    '$!{LOGIN_RESULT}',
+                    '$!{FAIL_REASON}',
+                    '$!{IP_ADDRESS}',
+                    '$!{USER_AGENT}',
+                    GETDATE(),
+                    '$!{CREATED_BY}',
+                    NULL,
+                    NULL,
+                    'Valid'
+                )
+            ]]>
+    </statement>
+    </sql>
+</queries>
