@@ -15,19 +15,13 @@ public class DefaultQueryExecutor implements QueryExecutor {
 
     @Override
     public Object executeUpdate(QueryRequestDto dto) {
-        String sql = sqlXmlLoader.getSqlFromXml(
-                dto.getId(),
-                dto.getVersion(),
-                dto.getParam());
-        return jdbcTemplate.update(sql); // 👉 update() 는 int 반환 → Object OK
+        String sql = sqlXmlLoader.getSqlFromXml( dto.getId(), dto.getVersion(), dto.getParam());
+        return jdbcTemplate.update(sql);
     }
 
     @Override
     public Object executeQuery(QueryRequestDto dto) {
-        String sql = sqlXmlLoader.getSqlFromXml(
-                dto.getId(),
-                dto.getVersion(),
-                dto.getParam());
+        String sql = sqlXmlLoader.getSqlFromXml( dto.getId(), dto.getVersion(), dto.getParam());
         return jdbcTemplate.queryForList(sql);
     }
 }
