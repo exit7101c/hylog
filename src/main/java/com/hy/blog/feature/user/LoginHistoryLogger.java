@@ -1,7 +1,7 @@
-package com.hy.blog.historylogger;
+package com.hy.blog.feature.user;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.core.executor.QueryExecutor;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.query.QueryExecutor;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

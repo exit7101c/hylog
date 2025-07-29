@@ -1,8 +1,8 @@
-package com.hy.blog.core.router;
+package com.hy.blog.exec;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.core.executor.QueryExecutor;
-import com.hy.blog.feature.service.LoginService;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.feature.user.LoginService;
+import com.hy.blog.query.QueryExecutor;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

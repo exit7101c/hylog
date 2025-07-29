@@ -1,6 +1,6 @@
-package com.hy.blog.common.audit;
+package com.hy.blog.security;
 
-import com.hy.blog.feature.model.User;
+import com.hy.blog.feature.user.User;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 

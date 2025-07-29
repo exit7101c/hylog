@@ -1,7 +1,7 @@
-package com.hy.blog.feature.service;
+package com.hy.blog.query;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.core.router.QueryRouter;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.exec.QueryRouter;
 import org.springframework.stereotype.Service;
 
 @Service

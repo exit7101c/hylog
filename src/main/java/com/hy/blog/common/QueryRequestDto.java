@@ -1,4 +1,4 @@
-package com.hy.blog.common.model;
+package com.hy.blog.common;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package com.hy.blog.feature.model;
+package com.hy.blog.feature.user;
 
-import com.hy.blog.common.audit.AuditListener;
+import com.hy.blog.security.AuditListener;
 import jakarta.persistence.*;
 import lombok.*;
 

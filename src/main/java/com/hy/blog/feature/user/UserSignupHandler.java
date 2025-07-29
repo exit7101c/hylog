@@ -1,14 +1,15 @@
-package com.hy.blog.feature.handler;
+package com.hy.blog.feature.user;
 
-import com.hy.blog.core.exec.ExecutableHandler;
-import com.hy.blog.core.response.ApiResponse;
-import com.hy.blog.feature.repository.UserRepository;
-import com.hy.blog.feature.model.User;
+import com.hy.blog.common.ApiErrorCode;
+import com.hy.blog.exec.ExecutableHandler;
+import com.hy.blog.common.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 
+@Slf4j
 @Component("USER_SIGNUP_HANDLER")
 @RequiredArgsConstructor
 public class UserSignupHandler implements ExecutableHandler {
@@ -23,9 +24,12 @@ public class UserSignupHandler implements ExecutableHandler {
         String email = (String) param.get("EMAIL");
         String userName = (String) param.get("USER_NAME");
 
-        //  간단한 중복 체크
+        // 중복 체크
         if (userRepository.existsByUserId(userId)) {
-            return Map.of("message", "이미 존재하는 사용자입니다.");
+            ApiErrorCode errorCode = ApiErrorCode.DUPLICATE_USER;
+            // log the error message
+            log.warn("[{}] {}", errorCode.getCode(), errorCode.getLogMessage());
+            return ApiResponse.fail(errorCode);
         }
 
         User newUser = User.builder()

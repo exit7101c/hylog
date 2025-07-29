@@ -1,8 +1,7 @@
-package com.hy.blog.feature.service;
+package com.hy.blog.feature.user;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.core.executor.QueryExecutor;
-import com.hy.blog.historylogger.LoginHistoryLogger;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.query.QueryExecutor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

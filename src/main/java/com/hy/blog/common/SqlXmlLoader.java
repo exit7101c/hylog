@@ -1,4 +1,4 @@
-package com.hy.blog.common.loader;
+package com.hy.blog.common;
 
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;

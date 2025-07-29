@@ -1,7 +1,7 @@
-package com.hy.blog.common.security;
+package com.hy.blog.security;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.feature.service.QueryService;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.query.QueryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AuthenticationFailureBadCredentialsEvent;

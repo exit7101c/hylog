@@ -1,4 +1,4 @@
-package com.hy.blog.common.model;
+package com.hy.blog.common;
 
 import java.util.List;
 import java.util.Map;

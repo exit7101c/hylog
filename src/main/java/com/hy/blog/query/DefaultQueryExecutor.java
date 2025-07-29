@@ -1,7 +1,8 @@
-package com.hy.blog.core.executor;
+package com.hy.blog.query;
 
-import com.hy.blog.common.loader.SqlXmlLoader;
-import com.hy.blog.common.model.QueryRequestDto;
+import com.hy.blog.common.SqlXmlLoader;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.query.QueryExecutor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;

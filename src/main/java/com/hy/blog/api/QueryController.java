@@ -1,7 +1,7 @@
-package com.hy.blog.controller;
+package com.hy.blog.api;
 
-import com.hy.blog.common.model.QueryRequestDto;
-import com.hy.blog.feature.service.QueryService;
+import com.hy.blog.common.QueryRequestDto;
+import com.hy.blog.query.QueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

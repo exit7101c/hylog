@@ -1,4 +1,4 @@
-package com.hy.blog.common.model;
+package com.hy.blog.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,19 +12,26 @@ public class ApiResponse {
     private boolean success;
     private String message;
     private Object data;
+    private String errorCode;
 
     // 성공 (데이터 없음)
     public static ApiResponse success(String message) {
-        return of(true, message, null);
+        return of(true, message, null, null);
     }
 
-    // 성공 (데이터 있음)
     public static ApiResponse success(String message, Object data) {
-        return of(true, message, data);
+        return of(true, message, data, null);
     }
 
-    // 실패
     public static ApiResponse fail(String message) {
-        return of(false, message, null);
+        return of(false, message, null, null);
+    }
+
+    public static ApiResponse fail(String message, String errorCode) {
+        return of(false, message, null, errorCode);
+    }
+
+    public static ApiResponse fail(ApiErrorCode errorCode) {
+        return of(false, null, null, errorCode.getCode());
     }
 }

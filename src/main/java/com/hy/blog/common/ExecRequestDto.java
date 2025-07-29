@@ -1,4 +1,4 @@
-package com.hy.blog.core.exec;
+package com.hy.blog.common;
 
 import lombok.Data;
 

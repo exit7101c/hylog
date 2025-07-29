@@ -1,6 +1,5 @@
-package com.hy.blog.feature.repository;
+package com.hy.blog.feature.user;
 
-import com.hy.blog.feature.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, String> {
